@@ -2,6 +2,7 @@ package com.example.inferno
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tv.text = "ohayo"
+        rv_story.layoutManager = LinearLayoutManager(this)
+        rv_story.adapter = StoryAdapter(
+            listOf(
+                StoryItem("начальная репллика", "да", null, null)
+            )
+        ) { }
     }
 }
