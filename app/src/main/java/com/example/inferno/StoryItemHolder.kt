@@ -20,7 +20,7 @@ class StoryItemHolder(
         if (item.answer1 == null)
             btn_answer1.visibility = View.GONE
         else
-            btn_answer1.text = item.answer1
+            btn_answer1.text = item.answer1!!.text
 
         itemView.setOnClickListener { clickLambda(item) }
     }

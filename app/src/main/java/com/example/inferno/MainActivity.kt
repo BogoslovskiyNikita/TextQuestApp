@@ -13,9 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         rv_story.layoutManager = LinearLayoutManager(this)
         rv_story.adapter = StoryAdapter(
-            listOf(
-                StoryItem("начальная репллика", "да", null, null)
-            )
+            listOf(StoryStorage.getStorage()[0])
         ) { }
     }
 }

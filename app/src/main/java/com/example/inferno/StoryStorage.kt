@@ -4,9 +4,16 @@ class StoryStorage {
 
     companion object {
         fun getStorage() : List<StoryItem> = listOf(
-            StoryItem("реплика1", "ответ1", "ответ2", null),
-            StoryItem("реплика1", "ответ1", "ответ2", "ответ3"),
-            StoryItem("реплика1", "ответ1", "ответ2", "ответ3")
+            StoryItem("стартовая реплика",
+                Answer("ответ1", StoryItem("реплика, к которой ведет ответ1",
+                    null,
+                    null,
+                    null)),
+                Answer("ответ2", StoryItem("реплика, к которой ведет ответ2",
+                    null,
+                    null,
+                    null)),
+                null)
         )
     }
 }
