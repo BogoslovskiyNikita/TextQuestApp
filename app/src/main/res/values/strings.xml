@@ -3,4 +3,11 @@
     <string name="lefthanditem">leftHandItem</string>
     <string name="hpbar">HPBar</string>
     <string name="righthanditem">rightHandItem</string>
+    <string name="name1">Романчук Никита</string>
+    <string name="name2">Богословский Никита</string>
+    <string name="name3">Ибрагимова Дина</string>
+    <string name="name4">Алейник Анна</string>
+    <string name="name5">Максимов Константин</string>
+    <string name="thanks_text_content">thanks_text_content</string>
+    <string name="exit_main_menu">Меню</string>
 </resources>
