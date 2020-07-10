@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //todo: добавить finish() везде
+
         StartGame.setOnClickListener() {
             val intent = Intent(applicationContext, StoryActivity::class.java)
             startActivity(intent)
@@ -20,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         //есть баг, не всегда работает корректно.
         //может отказаться от этой кнопки? в современных приложениях почти не встречал такого.
         Exit.setOnClickListener() {
-            finish()
             exitProcess(0)
         }
 
