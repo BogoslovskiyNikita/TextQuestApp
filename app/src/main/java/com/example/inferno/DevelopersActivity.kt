@@ -14,6 +14,7 @@ class DevelopersActivity : AppCompatActivity() {
         ExitDevelopers.setOnClickListener() {
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

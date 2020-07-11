@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Inferno</string>
+    <string name="start">Начать</string>
+    <string name="exit">Выйти</string>
+    <string name="inferno">INFERNO</string>
+    <string name="this_is_just">Этого всего лишь</string>
+    <string name="openactivitywithlistofdevelopers">OpenActivityWithListOfDevelopers</string>
     <string name="lefthanditem">leftHandItem</string>
     <string name="hpbar">HPBar</string>
     <string name="righthanditem">rightHandItem</string>

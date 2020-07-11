@@ -15,13 +15,11 @@ class MainActivity : AppCompatActivity() {
         StartGame.setOnClickListener() {
             val intent = Intent(applicationContext, StoryActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
-        //есть баг, не всегда работает корректно.
-        //может отказаться от этой кнопки? в современных приложениях почти не встречал такого.
         Exit.setOnClickListener() {
             finish()
-            exitProcess(0)
         }
 
         Developers.setOnClickListener() {
