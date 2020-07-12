@@ -15,4 +15,15 @@
     <string name="name5">Максимов Константин</string>
     <string name="thanks_text_content">thanks_text_content</string>
     <string name="exit_main_menu">Меню</string>
+    <string name="exit_end">Выход</string>
+    <string name="text_end_of_story">Друг мой. Слушать надо свой голос.
+Человечек внутри тебя ничего плохого не скажет.
+Но ты не послушал меня…
+Ты испытал мое терпение.
+И вот оно - оно кончилось.
+Я покидаю тебя.
+Теперь ты остаешься здесь один.
+Как перед сном - один на один с собой и со своими мыслями.</string>
+    <string name="title_end">Конец</string>
+    <string name="image_in_the_end_layout">imageInTheEndLayout</string>
 </resources>
