@@ -1,7 +1,9 @@
 package com.example.inferno
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_rock_paper_scissors.*
 import kotlin.random.Random
@@ -168,6 +170,26 @@ class RockPaperScissors : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onBackPressed() {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("Если вы выйдите, весь текущий прогресс будет потерян.")
+        builder.setCancelable(true)
+        builder.setNegativeButton(
+            "Нет, я еще останусь",
+            DialogInterface.OnClickListener { dialog, which ->
+                dialog.cancel()
+            })
+        builder.setPositiveButton(
+            "Да, я наигрался",
+            DialogInterface.OnClickListener { dialog, which -> finish()
+                val intent = Intent(applicationContext, MainActivity::class.java)
+                startActivity(intent)
+                finish()})
+
+        val alertDialog = builder.create()
+        alertDialog.show()
     }
 
 }
