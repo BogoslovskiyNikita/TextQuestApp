@@ -8,4 +8,8 @@
     <string name="lefthanditem">leftHandItem</string>
     <string name="hpbar">HPBar</string>
     <string name="righthanditem">rightHandItem</string>
+    <string name="dobrynya_choose">Добрыня выбросил </string>
+    <string name="tie">Ничья! Счёт </string>
+    <string name="win">Ты победил! Счёт </string>
+    <string name="lose">Хей, Добрыня победил! Счёт </string>
 </resources>
