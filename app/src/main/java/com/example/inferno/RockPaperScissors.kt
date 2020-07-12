@@ -45,19 +45,29 @@ class RockPaperScissors : AppCompatActivity() {
             playerChoice = 'r'
             if (dobryniaChoice == 'r') {
                 replic = replic + getString(R.string.tie) + " " + dobryniaPoints + ":" + playerPoints
+
+                dobryniaChoice = 's'
+                thing = " ножницы.\n"
+
             } else {
                 if (dobryniaChoice == 's') {
                     playerPoints++
                     replic = replic + getString(R.string.win) + " " + dobryniaPoints + ":" + playerPoints
+
+                    dobryniaChoice = 'p'
+                    thing = " бумагу.\n"
+
                 } else {
                     dobryniaPoints++
                     replic = replic + getString(R.string.lose) + " " + dobryniaPoints + ":" + playerPoints
+
+                    dobryniaChoice = 'r'
+                    thing = " камень.\n"
+
                 }
             }
 
             dobrynya_text.text = replic
-            dobryniaChoice = 's'
-            thing = " ножницы.\n"
             replic = getString(R.string.dobrynya_choose) + thing;
 
 
@@ -78,19 +88,29 @@ class RockPaperScissors : AppCompatActivity() {
 
             if (dobryniaChoice == 'p') {
                 replic = replic + getString(R.string.tie) + " " + dobryniaPoints + ":" + playerPoints
+
+                dobryniaChoice = 'r'
+                thing = " камень.\n"
+
             } else {
                 if (dobryniaChoice == 'r') {
                     playerPoints++
                     replic = replic + getString(R.string.win) + " " + dobryniaPoints + ":" + playerPoints
+
+                    dobryniaChoice = 's'
+                    thing = " ножницы.\n"
+
                 } else {
                     dobryniaPoints++
                     replic = replic + getString(R.string.lose) + " " + dobryniaPoints + ":" + playerPoints
+
+                    dobryniaChoice = 'p'
+                    thing = " бумагу.\n"
+
                 }
             }
 
             dobrynya_text.text = replic;
-            dobryniaChoice = 'r'
-            thing = " камень.\n"
             replic = getString(R.string.dobrynya_choose) + thing
 
 
@@ -111,19 +131,29 @@ class RockPaperScissors : AppCompatActivity() {
 
             if (dobryniaChoice == 's') {
                 replic = replic + getString(R.string.tie) + " " + dobryniaPoints + ":" + playerPoints
+
+                dobryniaChoice = 'p'
+                thing = " бумагу.\n"
+
             } else {
                 if (dobryniaChoice == 'p') {
                     playerPoints++
                     replic = replic + getString(R.string.win) + " " + dobryniaPoints + ":" + playerPoints
+
+                    dobryniaChoice = 'r'
+                    thing = " камень.\n"
+
                 } else {
                     dobryniaPoints++
                     replic = replic + getString(R.string.lose) + " " + dobryniaPoints + ":" + playerPoints
+
+                    dobryniaChoice = 's'
+                    thing = " ножницы.\n"
+
                 }
             }
 
             dobrynya_text.text = replic
-            dobryniaChoice = 'p'
-            thing = " бумагу.\n"
             replic = getString(R.string.dobrynya_choose) + thing;
 
             if (dobryniaPoints >= 3 || playerPoints >= 3) {
