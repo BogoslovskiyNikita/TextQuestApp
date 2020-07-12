@@ -25,7 +25,8 @@ class StoryActivity : AppCompatActivity() {
             "Да, я наигрался",
             DialogInterface.OnClickListener { dialog, which -> finish()
                 val intent = Intent(applicationContext, MainActivity::class.java)
-                startActivity(intent)})
+                startActivity(intent)
+                finish()})
 
         val alertDialog = builder.create()
         alertDialog.show()

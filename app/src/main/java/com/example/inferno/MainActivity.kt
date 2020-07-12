@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         Developers.setOnClickListener() {
             val intent = Intent(applicationContext, DevelopersActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
