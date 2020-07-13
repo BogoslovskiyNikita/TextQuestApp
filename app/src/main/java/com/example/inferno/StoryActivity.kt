@@ -14,7 +14,7 @@ class StoryActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("Если вы выйдите, весь текущий прогресс будет потерян.")
+        builder.setMessage("Если вы выйдете, весь текущий прогресс будет потерян.")
         builder.setCancelable(true)
         builder.setNegativeButton(
             "Нет, я еще останусь",
