@@ -8,6 +8,14 @@
     <string name="lefthanditem">leftHandItem</string>
     <string name="hpbar">HPBar</string>
     <string name="righthanditem">rightHandItem</string>
+    <string name="dobrynya_choose">Добрыня выбросил </string>
+    <string name="tie">Ничья! Счёт </string>
+    <string name="win">Ты победил! Счёт </string>
+    <string name="lose">Хей, Добрыня победил! Счёт </string>
+    <string name="dobrynyaText">Выбери, что ты выбросишь:</string>
+    <string name="rock">камень</string>
+    <string name="paper">бумага</string>
+    <string name="scissors">ножницы</string>
     <string name="name1">Романчук Никита</string>
     <string name="name2">Богословский Никита</string>
     <string name="name3">Ибрагимова Дина</string>
