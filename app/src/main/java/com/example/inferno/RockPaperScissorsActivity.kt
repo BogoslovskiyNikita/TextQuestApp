@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_rock_paper_scissors.*
 import kotlin.random.Random
 
-class RockPaperScissors : AppCompatActivity() {
+class RockPaperScissorsActivity : AppCompatActivity() {
 
     var playerWon = false
     var flag = false;
@@ -174,7 +174,7 @@ class RockPaperScissors : AppCompatActivity() {
 
     override fun onBackPressed() {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("Если вы выйдите, весь текущий прогресс будет потерян.")
+        builder.setMessage("Если вы выйдете, весь текущий прогресс будет потерян.")
         builder.setCancelable(true)
         builder.setNegativeButton(
             "Нет, я еще останусь",
@@ -191,5 +191,4 @@ class RockPaperScissors : AppCompatActivity() {
         val alertDialog = builder.create()
         alertDialog.show()
     }
-
 }

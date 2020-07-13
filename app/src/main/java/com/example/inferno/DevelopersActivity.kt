@@ -11,11 +11,16 @@ class DevelopersActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_developers)
 
-        ExitDevelopers.setOnClickListener() {
+        ExitDevelopers.setOnClickListener {
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
+    }
 
+    override fun onBackPressed() {
+        val intent = Intent(applicationContext, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

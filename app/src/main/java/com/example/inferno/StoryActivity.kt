@@ -23,7 +23,7 @@ class StoryActivity : AppCompatActivity() {
             })
         builder.setPositiveButton(
             "Да, я наигрался",
-            DialogInterface.OnClickListener { dialog, which -> finish()
+            DialogInterface.OnClickListener { dialog, which -> 
                 val intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
                 finish()})
