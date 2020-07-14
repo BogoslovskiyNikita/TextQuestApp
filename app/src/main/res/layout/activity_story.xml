@@ -43,4 +43,12 @@
             android:contentDescription="@string/righthanditem"
             app:srcCompat="@drawable/ic_launcher_background" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStory"
+        android:layout_width="409dp"
+        android:layout_height="585dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

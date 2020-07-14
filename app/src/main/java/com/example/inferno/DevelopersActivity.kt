@@ -17,5 +17,7 @@ class DevelopersActivity : AppCompatActivity() {
             finish()
         }
 
+
+
     }
 }
