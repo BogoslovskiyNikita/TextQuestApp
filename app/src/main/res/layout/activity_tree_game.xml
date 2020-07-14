@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginTop="26dp"
-        android:layout_marginBottom="15dp"
         android:text="@string/dedSay"
         android:textAlignment="textStart"
         android:textColor="#1d1a1b"
@@ -23,17 +22,19 @@
 
     <EditText
         android:id="@+id/user_choice"
-        android:layout_width="64dp"
+        android:layout_width="65dp"
         android:layout_height="46dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:autofillHints="no"
         android:background="@drawable/edit_text_border"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintEnd_toStartOf="@+id/btn_answer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="LabelFor" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -42,6 +43,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="18dp"
+        android:contentDescription="@string/todo"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btn_answer"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,26 +53,29 @@
 
     <Button
         android:id="@+id/btn_answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="65dp"
+        android:layout_height="46dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="86dp"
         android:background="@drawable/button_tree_game"
         android:text="@string/answer"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/user_choice"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
+    <Button
         android:id="@+id/next_ded_say"
         android:layout_width="52dp"
         android:layout_height="20dp"
         android:layout_marginTop="26dp"
         android:layout_marginBottom="15dp"
-        android:textColor="#1d1a1b"
-        android:textSize="14sp"
-        android:text="@string/nextDadSay"
+        android:background="@android:color/transparent"
+        android:text="@string/nextDedSay"
+        android:textColor="#0066cc"
+        android:textSize="12sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/ded_say"
         app:layout_constraintTop_toBottomOf="@+id/ded_say" />
