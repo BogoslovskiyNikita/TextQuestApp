@@ -10,7 +10,7 @@ import kotlin.random.Random
 
 class RockPaperScissorsActivity : AppCompatActivity() {
 
-    var playerWon = false
+    var playerWon = 0
     var flag = false;
 
     var dobryniaPoints = 0;
@@ -74,7 +74,7 @@ class RockPaperScissorsActivity : AppCompatActivity() {
 
 
             if (dobryniaPoints >= 3 || playerPoints >= 3) {
-                if (dobryniaPoints < playerPoints) playerWon = true;
+                if (dobryniaPoints < playerPoints) playerWon = 1;
 
                 /*
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
@@ -117,7 +117,7 @@ class RockPaperScissorsActivity : AppCompatActivity() {
 
 
             if (dobryniaPoints >= 3 || playerPoints >= 3) {
-                if (dobryniaPoints < playerPoints) playerWon = true;
+                if (dobryniaPoints < playerPoints) playerWon = 1
 
                 /*
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
@@ -159,7 +159,7 @@ class RockPaperScissorsActivity : AppCompatActivity() {
             replic = getString(R.string.dobrynya_choose) + thing;
 
             if (dobryniaPoints >= 3 || playerPoints >= 3) {
-                if (dobryniaPoints < playerPoints) playerWon = true;
+                if (dobryniaPoints < playerPoints) playerWon = 1
 
                 /*
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
