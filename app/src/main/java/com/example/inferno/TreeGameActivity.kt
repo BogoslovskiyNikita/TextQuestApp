@@ -15,7 +15,7 @@ class TreeGameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tree_game)
 
         var count = -1
-        var won = false;
+        var won = 0;
         var number = 0;
 
         user_choice.visibility = View.GONE
@@ -66,10 +66,10 @@ class TreeGameActivity : AppCompatActivity() {
 
                 if (number == dedNumber) {
                     ded_say.text = getString(R.string.tree_won, number)
-                    won = true
+                    won = 1
                 } else {
                     ded_say.text = getString(R.string.tree_lose)
-                    won = false
+                    won = 0
                 }
 
                 /*Шанс победить 1 к 1*/
@@ -84,10 +84,10 @@ class TreeGameActivity : AppCompatActivity() {
 
                 if (number == dedNumber) {
                     ded_say.text = getString(R.string.tree_won, number)
-                    won = true
+                    won = 1
                 } else {
                     ded_say.text = getString(R.string.tree_lose)
-                    won = false
+                    won = 0
                 }*/
 
                 user_choice.visibility = View.GONE
