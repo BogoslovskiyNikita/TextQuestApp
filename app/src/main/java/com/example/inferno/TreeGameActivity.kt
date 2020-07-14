@@ -20,30 +20,33 @@ class TreeGameActivity : AppCompatActivity() {
 
         user_choice.visibility = View.GONE
         ded_say.text = getString(R.string.tree_begin1)
+        btn_answer.visibility = View.GONE
 
+        next_ded_say.setOnClickListener() {
+            ded_say.text = getString(R.string.tree_begin2)
+            btn_answer.visibility = View.VISIBLE
+            next_ded_say.visibility = View.GONE
+            user_choice.visibility = View.VISIBLE
+
+        }
 
 
         btn_answer.setOnClickListener() {
             count++
-            user_choice.visibility = View.VISIBLE
-
 
             if (count in 1..4) {
                 try {
                     number = Integer.parseInt(user_choice.text.toString())
                     if (number > 10 || number < 1) throw Exception()
-                } catch (e: Exception) {
+                } catch (e : Exception) {
                     count--;
                     number = 0
                     Toast.makeText(this, getString(R.string.tree_err), Toast.LENGTH_LONG).show()
                 }
             }
 
-            if (count == 0) {
-                ded_say.text = getString(R.string.tree_begin2)
-            }
-
             if (count == 1 && number > 0) {
+
                 ded_say.text = getString(R.string.tree_first, number)
             }
 
