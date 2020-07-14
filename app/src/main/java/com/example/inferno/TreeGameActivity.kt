@@ -1,18 +1,27 @@
 package com.example.inferno
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_tree_game.*
 import kotlin.random.Random
 
+
 class TreeGameActivity : AppCompatActivity() {
+
+    private var sound1: MediaPlayer? = null
+    private var sound2: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tree_game)
+
+        sound1 = MediaPlayer.create(this, R.raw.sirena)
+        val sound1 = sound1 ?: return
+        sound2 = MediaPlayer.create(this, R.raw.sound2)
+        val sound2 = sound2 ?: return
 
         var count = -1
         var won = 0;
@@ -65,9 +74,11 @@ class TreeGameActivity : AppCompatActivity() {
                 val dedNumber = Random.nextInt(10) + 1
 
                 if (number == dedNumber) {
+                    sound1.start()
                     ded_say.text = getString(R.string.tree_won, number)
                     won = 1
                 } else {
+                    sound2.start()
                     ded_say.text = getString(R.string.tree_lose)
                     won = 0
                 }
