@@ -11,23 +11,29 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        startService(Intent(this, MyService::class.java))
         StartGame.setOnClickListener() {
+            stopService(Intent(this, MyService::class.java))
             val intent = Intent(applicationContext, StoryActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        button.setOnClickListener() {
+            stopService(Intent(this, MyService::class.java))
+            val intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
             startActivity(intent)
         }
 
-        //есть баг, не всегда работает корректно.
-        //может отказаться от этой кнопки? в современных приложениях почти не встречал такого.
         Exit.setOnClickListener() {
+            stopService(Intent(this, MyService::class.java))
             finish()
-            exitProcess(0)
         }
 
         Developers.setOnClickListener() {
             val intent = Intent(applicationContext, DevelopersActivity::class.java)
             startActivity(intent)
+            finish()
         }
-
     }
 }

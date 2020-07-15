@@ -44,4 +44,17 @@
     <string name="tree_err">Введи число от 1 до 10!</string>
     <string name="tree_end">Хмм…</string>
     <!--TreeGame-->
+    <string name="dobrynyaText">Выбери, что ты выбросишь:</string>
+    <string name="rock">камень</string>
+    <string name="paper">бумага</string>
+    <string name="scissors">ножницы</string>
+    <string name="name1">Романчук Никита</string>
+    <string name="name2">Богословский Никита</string>
+    <string name="name3">Ибрагимова Дина</string>
+    <string name="name4">Алейник Анна</string>
+    <string name="name5">Максимов Константин</string>
+    <string name="thanks_text_content">thanks_text_content</string>
+    <string name="exit_main_menu">Меню</string>
+    <string name="button">Button</string>
+
 </resources>

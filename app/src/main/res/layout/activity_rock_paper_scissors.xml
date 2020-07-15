@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".RockPaperScissors">
+    tools:context=".RockPaperScissorsActivity">
 
     <TextView
         android:id="@+id/dobrynya_text"
         android:layout_width="270dp"
         android:layout_height="120dp"
         android:layout_marginTop="172dp"
-        android:text="Выбери, что ты выбросишь:"
+        android:text="@string/dobrynyaText"
         android:textAlignment="center"
         android:textColor="#C9FFE5"
         android:textSize="24sp"
@@ -26,9 +26,10 @@
         android:id="@+id/rock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="124dp"
-        android:text="камень"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/rock"
         android:background="@drawable/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dobrynya_text" />
@@ -38,11 +39,13 @@
         android:id="@+id/paper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="124dp"
-        android:text="ножницы"
+        android:text="@string/paper"
+        app:layout_constraintRight_toLeftOf="@+id/scissors"
+        android:layout_marginRight="40dp"
+        app:layout_constraintLeft_toRightOf="@+id/rock"
+        android:layout_marginLeft="40dp"
         android:background="@drawable/button"
-        app:layout_constraintStart_toEndOf="@+id/rock"
         app:layout_constraintTop_toBottomOf="@+id/dobrynya_text" />
 
 
@@ -50,10 +53,10 @@
         android:id="@+id/scissors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="124dp"
-        android:text="бумага"
+        android:text="@string/scissors"
         android:background="@drawable/button"
-        app:layout_constraintStart_toEndOf="@+id/paper"
         app:layout_constraintTop_toBottomOf="@+id/dobrynya_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>
