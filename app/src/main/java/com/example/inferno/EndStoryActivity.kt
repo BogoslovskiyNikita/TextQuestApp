@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_end_story.*
 import java.util.HashMap
 
 class EndStoryActivity : AppCompatActivity() {
@@ -83,6 +84,16 @@ class EndStoryActivity : AppCompatActivity() {
                 val text = findViewById<View>(R.id.textStoryEnd) as TextView
                 text.text = endTexts[end["goodEnd"]]
             }
+        }
+
+        exitMainMenuFromEnd.setOnClickListener() {
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        exitGameFromEnd.setOnClickListener() {
+            finish()
         }
     }
 

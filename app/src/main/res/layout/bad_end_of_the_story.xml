@@ -8,7 +8,7 @@
     android:background="@drawable/bad_end_back_more_dark">
 
     <Button
-        android:id="@+id/exitGameFromEnd2"
+        android:id="@+id/exitGameFromEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/exitMainMenuFromEnd2"
+        android:id="@+id/exitMainMenuFromEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -34,7 +34,7 @@
         android:text="@string/exit_main_menu"
         android:textColor="#FCDDDDD7"
         android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/exitGameFromEnd2"
+        app:layout_constraintBottom_toTopOf="@+id/exitGameFromEnd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
