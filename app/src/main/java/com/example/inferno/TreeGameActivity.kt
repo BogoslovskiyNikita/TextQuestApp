@@ -1,5 +1,6 @@
 package com.example.inferno
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
@@ -54,68 +55,66 @@ class TreeGameActivity : AppCompatActivity() {
                 }
             }
 
-            if (count == 1 && number > 0) {
+            if (number > 0) {
+                when (count) {
+                    1 -> {
+                        ded_say.text = getString(R.string.tree_first, number)
+                    }
+                    2 -> {
+                        ded_say.text = getString(R.string.tree_second)
 
-                ded_say.text = getString(R.string.tree_first, number)
-            }
+                    }
+                    3 -> {
+                        ded_say.text = getString(R.string.tree_third, number)
 
-            if (count == 2 && number > 0) {
-                ded_say.text = getString(R.string.tree_second)
-            }
+                    }
+                    4 -> {
+                        /*Шанс победить 1 к 9 (сколько раз запускала (много), всегда проигрыш)*/
 
-            if (count == 3 && number > 0) {
-                ded_say.text = getString(R.string.tree_third, number)
-            }
+                        val dedNumber = Random.nextInt(10) + 1
 
-            if (count == 4 && number > 0) {
+                        if (number == dedNumber) {
+                            sound1.start()
+                            ded_say.text = getString(R.string.tree_won, number)
+                            won = 1
+                        } else {
+                            sound2.start()
+                            ded_say.text = getString(R.string.tree_lose)
+                            won = 0
+                        }
 
-                /*Шанс победить 1 к 9 (сколько раз запускала (много), всегда проигрыш)*/
+                        /*Шанс победить 1 к 1*/
 
-                val dedNumber = Random.nextInt(10) + 1
+                        /*val dedNumber = Random.nextInt(1,3)
 
-                if (number == dedNumber) {
-                    sound1.start()
-                    ded_say.text = getString(R.string.tree_won, number)
-                    won = 1
-                } else {
-                    sound2.start()
-                    ded_say.text = getString(R.string.tree_lose)
-                    won = 0
+                        if (number > 5) {
+                            number = 2
+                        } else {
+                            number = 1
+                        }
+
+                        if (number == dedNumber) {
+                            ded_say.text = getString(R.string.tree_won, number)
+                            won = 1
+                        } else {
+                            ded_say.text = getString(R.string.tree_lose)
+                            won = 0
+                        }*/
+
+                        btn_answer.text = getString(R.string.nextDedSay)
+                        user_choice.visibility = View.GONE
+
+                    }
+                    5 -> {
+                       /* val wonIntent = Intent(this, EndStoryActivity::class.java)
+                        wonIntent.putExtra(EndStoryActivity.WON, won)
+                        user_choice.visibility = View.GONE
+                        startActivity(wonIntent)*/
+                    }
                 }
-
-                /*Шанс победить 1 к 1*/
-
-                /*val dedNumber = Random.nextInt(1,3)
-
-                if (number > 5) {
-                    number = 2
-                } else {
-                    number = 1
-                }
-
-                if (number == dedNumber) {
-                    ded_say.text = getString(R.string.tree_won, number)
-                    won = 1
-                } else {
-                    ded_say.text = getString(R.string.tree_lose)
-                    won = 0
-                }*/
-
-                user_choice.visibility = View.GONE
+                user_choice.text.clear()
 
             }
-
-            if (count == 5 && number > 0) {
-
-                /*val wonIntent = Intent(this, EndStoryActivity::class.java)
-                wonIntent.putExtra(EndStoryActivity.WON, won)
-                user_choice.visibility = View.GONE
-                startActivity(wonIntent)*/
-
-            }
-
-
-            user_choice.text.clear()
 
         }
     }

@@ -16,7 +16,7 @@
 <!--
     <string name="dedSay">Вот и ко мне гости пожаловали... - томно и очень загадочно сказал Деревянный Дед.Тебе предстоит сразиться со мной в игре за два полцарства! Выиграешь и Добрыня заберет их как налог за прохождение этого квеста, проиграешь - останешься здесь навсегда.</string>
 -->
-    <string name="nextDadSay">Далее...</string>
+    <!--<string name="nextDadSay">Далее...</string>-->
     <string name="answer">сказать</string>
     <string name="nextDedSay">далее...</string>
     <string name="todo">TODO</string>
