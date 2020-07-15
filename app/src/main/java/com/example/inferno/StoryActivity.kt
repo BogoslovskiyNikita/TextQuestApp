@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_story.*
 
@@ -16,14 +17,19 @@ class StoryActivity : AppCompatActivity() {
 
         intent = Intent(this, EndStoryActivity::class.java)
 
+        //сделать поле ввода номера для теста вариативности текста концовки
+        val idOfTheEnd = findViewById<EditText>(R.id.IDEndTextFieldTest)
+
         badEnd.setOnClickListener() {
-            intent.putExtra("badEnd", 76)
+            intent.putExtra("badEnd", Integer.parseInt(idOfTheEnd.text.toString()))
             startActivity(intent)
+            finish()
         }
 
         goodEnd.setOnClickListener() {
-            intent.putExtra("goodEnd", 0)
+            intent.putExtra("goodEnd", Integer.parseInt(idOfTheEnd.text.toString()))
             startActivity(intent)
+            finish()
         }
 
     }
