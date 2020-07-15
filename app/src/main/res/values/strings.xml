@@ -42,4 +42,6 @@
     <string name="tree_lose">Прощай! Добрыня остался без двух полцарств.
         А он так хотел поскорей уйти на пенсию и заняться политикой…</string>
     <string name="tree_err">Введи число от 1 до 10!</string>
+    <string name="tree_end">Хмм…</string>
+    <!--TreeGame-->
 </resources>

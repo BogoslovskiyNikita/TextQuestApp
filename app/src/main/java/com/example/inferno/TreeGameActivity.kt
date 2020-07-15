@@ -2,7 +2,9 @@ package com.example.inferno
 
 import android.content.Intent
 import android.media.MediaPlayer
+import android.opengl.Visibility
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -72,15 +74,28 @@ class TreeGameActivity : AppCompatActivity() {
                         /*Шанс победить 1 к 9 (сколько раз запускала (много), всегда проигрыш)*/
 
                         val dedNumber = Random.nextInt(10) + 1
+                        btn_answer.visibility = View.GONE
+                        ded_say.text = getString(R.string.tree_end)
 
                         if (number == dedNumber) {
                             sound1.start()
-                            ded_say.text = getString(R.string.tree_won, number)
-                            won = 1
+
+                            Handler().postDelayed({
+                                ded_say.text = getString(R.string.tree_won, number)
+                                won = 1
+                                btn_answer.visibility = View.VISIBLE
+
+                            }, 4100)
+
                         } else {
                             sound2.start()
-                            ded_say.text = getString(R.string.tree_lose)
-                            won = 0
+
+                            Handler().postDelayed({
+                                ded_say.text = getString(R.string.tree_lose)
+                                won = 0
+                                btn_answer.visibility = View.VISIBLE
+                            }, 6100)
+
                         }
 
                         /*Шанс победить 1 к 1*/
@@ -94,11 +109,22 @@ class TreeGameActivity : AppCompatActivity() {
                         }
 
                         if (number == dedNumber) {
-                            ded_say.text = getString(R.string.tree_won, number)
-                            won = 1
+                            sound1.start()
+
+                            Handler().postDelayed({
+                                ded_say.text = getString(R.string.tree_won, number)
+                                won = 1
+                                btn_answer.visibility = View.VISIBLE
+
+                            }, 4100)
                         } else {
-                            ded_say.text = getString(R.string.tree_lose)
-                            won = 0
+                            sound2.start()
+
+                            Handler().postDelayed({
+                                ded_say.text = getString(R.string.tree_lose)
+                                won = 0
+                                btn_answer.visibility = View.VISIBLE
+                            }, 6100)
                         }*/
 
                         btn_answer.text = getString(R.string.nextDedSay)
