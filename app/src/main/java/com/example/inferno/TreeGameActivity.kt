@@ -23,12 +23,12 @@ class TreeGameActivity : AppCompatActivity() {
         sound2 = MediaPlayer.create(this, R.raw.sound2)
         val sound2 = sound2 ?: return
 
-        var count = -1
+        var count = 0
         var won = 0;
         var number = 0;
 
         user_choice.visibility = View.GONE
-        ded_say.text = getString(R.string.tree_begin1)
+        //ded_say.text = getString(R.string.tree_begin1)
         btn_answer.visibility = View.GONE
 
         next_ded_say.setOnClickListener() {
@@ -102,6 +102,7 @@ class TreeGameActivity : AppCompatActivity() {
                 }*/
 
                 user_choice.visibility = View.GONE
+
             }
 
             if (count == 5 && number > 0) {

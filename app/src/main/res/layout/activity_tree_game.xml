@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="26dp"
             android:layout_marginTop="26dp"
-            android:text="@string/dedSay"
+            android:text="@string/tree_begin1"
             android:textAlignment="textStart"
             android:textColor="#1d1a1b"
             android:textSize="14sp"
