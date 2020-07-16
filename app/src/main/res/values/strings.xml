@@ -55,6 +55,9 @@
     <string name="name5">Максимов Константин</string>
     <string name="thanks_text_content">thanks_text_content</string>
     <string name="exit_main_menu">Меню</string>
+    <string name="exit_end">Выход</string>
+    <string name="title_end">Конец</string>
+    <string name="image_in_the_end_layout">imageInTheEndLayout</string>
+    <string name="empty">empty</string>
     <string name="button">Button</string>
-
 </resources>

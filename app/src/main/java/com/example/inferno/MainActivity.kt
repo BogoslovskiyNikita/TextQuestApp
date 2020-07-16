@@ -40,7 +40,11 @@ class MainActivity : AppCompatActivity() {
             stopService(Intent(this, MyService::class.java))
         }
     }
-
+  
+    override fun onBackPressed() {
+        finish()
+    }
+  
     override fun onResume() {
         flag = true
         super.onResume()

@@ -8,7 +8,9 @@
     tools:context=".StoryActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:id="@+id/linearLayout2"
+
         android:layout_width="318dp"
         android:layout_height="57dp"
         android:layout_marginStart="1dp"
@@ -44,6 +46,42 @@
             app:srcCompat="@drawable/right_hand_icon" />
     </LinearLayout>
 
+    <!--For test-->
+    <!--<Button
+        android:id="@+id/badEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bad End"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/goodEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/goodEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:text="Good End"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/IDEndTextFieldTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="введи id существующей концовки"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327" />-->
+  
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
