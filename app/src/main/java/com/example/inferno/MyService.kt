@@ -20,8 +20,9 @@ class MyService : Service() {
         player!!.stop()
     }
 
-    override fun onStart(intent: Intent, startid: Int) {
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         player!!.start()
+        return super.onStartCommand(intent, flags, startId)
     }
 
     companion object {
