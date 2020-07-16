@@ -18,14 +18,6 @@ class EndStoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        player1 = MediaPlayer.create(this, R.raw.inferno_end_1)
-        player2 = MediaPlayer.create(this, R.raw.inferno_end_2)
-        player2!!.isLooping = true
-        player1!!.start()
-        player1!!.setOnCompletionListener(OnCompletionListener {
-            player2!!.start()
-        })
-
         val endTexts = HashMap<Int, String>()
         endTexts[0] =
             "Тебя встретили чуть дальше, ты даже не смог различить их силуэты, так непривычно было видеть яркий свет.\n\n" +
@@ -126,6 +118,7 @@ class EndStoryActivity : AppCompatActivity() {
         super.onResume()
         player1 = MediaPlayer.create(this, R.raw.inferno_end_1)
         player2 = MediaPlayer.create(this, R.raw.inferno_end_2)
+        player2!!.isLooping = true
         player1!!.start()
         player1!!.setOnCompletionListener(MediaPlayer.OnCompletionListener {
             player2!!.start()
