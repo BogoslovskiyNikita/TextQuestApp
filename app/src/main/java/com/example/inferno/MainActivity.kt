@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-        button.setOnClickListener() {
-            val intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
-            startActivity(intent)
-        }
+//        button.setOnClickListener() {
+//            val intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
+//            startActivity(intent)
+//        }
 
         Exit.setOnClickListener() {
             finish()
