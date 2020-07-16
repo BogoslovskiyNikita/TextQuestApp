@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".EndStoryActivity"></activity>
+        <activity android:name=".TreeGameActivity"></activity>
+        <service android:enabled="true" android:name=".MyService" />
+        <activity android:name=".RockPaperScissorsActivity" />
         <activity android:name=".DevelopersActivity" />
         <activity android:name=".StoryActivity" />
         <activity android:name=".MainActivity">
@@ -20,5 +23,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

@@ -39,7 +39,7 @@ class StoryActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("Если вы выйдите, весь текущий прогресс будет потерян.")
+        builder.setMessage("Если вы выйдете, весь текущий прогресс будет потерян.")
         builder.setCancelable(true)
         builder.setNegativeButton(
             "Нет, я еще останусь",
@@ -48,9 +48,10 @@ class StoryActivity : AppCompatActivity() {
             })
         builder.setPositiveButton(
             "Да, я наигрался",
-            DialogInterface.OnClickListener { dialog, which -> finish()
+            DialogInterface.OnClickListener { dialog, which -> 
                 val intent = Intent(applicationContext, MainActivity::class.java)
-                startActivity(intent)})
+                startActivity(intent)
+                finish()})
 
         val alertDialog = builder.create()
         alertDialog.show()

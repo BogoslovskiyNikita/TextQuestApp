@@ -8,6 +8,46 @@
     <string name="lefthanditem">leftHandItem</string>
     <string name="hpbar">HPBar</string>
     <string name="righthanditem">rightHandItem</string>
+    <string name="dobrynya_choose">Добрыня выбросил </string>
+    <string name="tie">Ничья! Счёт </string>
+    <string name="win">Ты победил! Счёт </string>
+    <string name="lose">Хей, Добрыня победил! Счёт </string>
+    <string name="ded_say">TextView</string>
+<!--
+    <string name="dedSay">Вот и ко мне гости пожаловали... - томно и очень загадочно сказал Деревянный Дед.Тебе предстоит сразиться со мной в игре за два полцарства! Выиграешь и Добрыня заберет их как налог за прохождение этого квеста, проиграешь - останешься здесь навсегда.</string>
+-->
+    <!--<string name="nextDadSay">Далее...</string>-->
+    <string name="answer">сказать</string>
+    <string name="nextDedSay">далее...</string>
+    <string name="todo">TODO</string>
+
+    <!--TreeGame-->
+    <string name="tree_begin1">"Вот и ко мне гости пожаловали…" - томно и очень загадочно сказал Деревянный Дед.
+        "Тебе предстоит сразиться со мной в игре за два полцарства! Выиграешь и Добрыня заберет их как налог за прохождение этого квеста, проиграешь - останешься здесь навсегда.</string>
+    <string name="tree_begin2">Добрыня давно положил свой глаз на мои полцарства…
+        Чтобы получить их, тебе предстоит набрать 100 очков!
+        Игра проста, как твои предыдущие испытания. Ты справишься (но это не точно)!
+        Я загадал число от 1 до 10 включительно. Попробуй угадать!"</string>
+    <string name="tree_first">Да, ты прав! Это именно %d.
+        Как ты это сделал? У тебя есть 5 очков. Играем дальше!</string>
+    <string name="tree_second">Опять верно! Поразительно! Ты заработал еще 15 очков! Итого у тебя 20.
+        Следующий раунд будет стоить 30 очков. Соберись! Это целая половина от двух полцарств!</string>
+    <string name="tree_third">Невероятно! Ты идешь так гладко, а главное так правильно!
+        Как ты мог знать, что я загадаю именно %d? Ты прямо читаешь мои мысли!
+        Что ж, вот ты и подобрался к финалу этой пьесы. На кону - 50 очков!
+        Выиграешь - и два полцарства твои! Уже чувствуешь запах свободы?</string>
+    <string name="tree_won">Ты просто рубишь меня на корню! Вынужден признать, что ты прав!
+        Я загадывал именно %d. Я так не хочу расставаться со своими полцарствами, но обязан.
+        Договор дороже денег, особенно у нас Деревянных Бабаев.</string>
+    <string name="tree_lose">Прощай! Добрыня остался без двух полцарств.
+        А он так хотел поскорей уйти на пенсию и заняться политикой…</string>
+    <string name="tree_err">Введи число от 1 до 10!</string>
+    <string name="tree_end">Хмм…</string>
+    <!--TreeGame-->
+    <string name="dobrynyaText">Выбери, что ты выбросишь:</string>
+    <string name="rock">камень</string>
+    <string name="paper">бумага</string>
+    <string name="scissors">ножницы</string>
     <string name="name1">Романчук Никита</string>
     <string name="name2">Богословский Никита</string>
     <string name="name3">Ибрагимова Дина</string>
@@ -19,4 +59,5 @@
     <string name="title_end">Конец</string>
     <string name="image_in_the_end_layout">imageInTheEndLayout</string>
     <string name="empty">empty</string>
+    <string name="button">Button</string>
 </resources>
