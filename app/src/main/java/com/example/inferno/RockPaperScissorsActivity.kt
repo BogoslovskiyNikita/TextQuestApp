@@ -3,6 +3,7 @@ package com.example.inferno
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_rock_paper_scissors.*
@@ -23,6 +24,9 @@ class RockPaperScissorsActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        actionBar?.hide()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rock_paper_scissors)
 

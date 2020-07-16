@@ -18,6 +18,9 @@ class TreeGameActivity : AppCompatActivity() {
     private var sound2: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        actionBar?.hide()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tree_game)
 
