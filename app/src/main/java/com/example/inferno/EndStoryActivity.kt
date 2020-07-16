@@ -1,16 +1,30 @@
 package com.example.inferno
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.media.MediaPlayer
+import android.media.MediaPlayer.OnCompletionListener
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_end_story.*
-import java.util.HashMap
+import java.util.*
+
 
 class EndStoryActivity : AppCompatActivity() {
+    private var player1: MediaPlayer? = null
+    private var player2: MediaPlayer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        player1 = MediaPlayer.create(this, R.raw.inferno_end_1)
+        player2 = MediaPlayer.create(this, R.raw.inferno_end_2)
+        player2!!.isLooping = true
+        player1!!.start()
+        player1!!.setOnCompletionListener(OnCompletionListener {
+            player2!!.start()
+        })
 
         val endTexts = HashMap<Int, String>()
         endTexts[0] =
@@ -101,5 +115,20 @@ class EndStoryActivity : AppCompatActivity() {
         val intent = Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        player1!!.stop()
+        player2!!.stop()
+    }
+    override fun onResume() {
+        super.onResume()
+        player1 = MediaPlayer.create(this, R.raw.inferno_end_1)
+        player2 = MediaPlayer.create(this, R.raw.inferno_end_2)
+        player1!!.start()
+        player1!!.setOnCompletionListener(MediaPlayer.OnCompletionListener {
+            player2!!.start()
+        })
     }
 }
