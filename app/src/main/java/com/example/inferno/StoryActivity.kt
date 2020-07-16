@@ -17,20 +17,23 @@ class StoryActivity : AppCompatActivity() {
 
         intent = Intent(this, EndStoryActivity::class.java)
 
-        //сделать поле ввода номера для теста вариативности текста концовки
-        val idOfTheEnd = findViewById<EditText>(R.id.IDEndTextFieldTest)
+        // For test
+        /*val idOfTheEnd = findViewById<EditText>(R.id.IDEndTextFieldTest)*/
 
-        badEnd.setOnClickListener() {
-            intent.putExtra("badEnd", Integer.parseInt(idOfTheEnd.text.toString()))
+        val idOfTheEndText = 1
+
+        // For test
+        /*badEnd.setOnClickListener() {
+            intent.putExtra("badEnd", idOfTheEndText)
             startActivity(intent)
             finish()
         }
 
         goodEnd.setOnClickListener() {
-            intent.putExtra("goodEnd", Integer.parseInt(idOfTheEnd.text.toString()))
+            intent.putExtra("goodEnd", idOfTheEndText)
             startActivity(intent)
             finish()
-        }
+        }*/
 
     }
 
