@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_story.*
 
 
 
-//D:\Java projects\PrntscBot\src\main\java\test\1.txt
+//D:\Java projects\PrntscBot\src\main\java\test\a1.txt
 
 class StoryActivity : AppCompatActivity() {
     lateinit var storyData: MutableList<StoryItem>
@@ -29,16 +29,18 @@ class StoryActivity : AppCompatActivity() {
         )
 
         adapter = StoryAdapter(storyData) {
-            var newElements =
-                Parsing.storyItemFromLL(Parsing.getListOfReplics(Parsing.pathTemplate + it + ".txt"))
-            storyData.addAll(
-                storyData.size - 1, newElements
-            )
-            adapter.notifyItemRangeInserted(storyData.size - 1, newElements.size)
+            //var newElements = Parsing.storyItemFromLL(Parsing.getListOfReplics(Parsing.pathTemplate + it + ".txt"))
+            //storyData.addAll( storyData.size - 1, newElements )
+            //adapter.notifyItemRangeInserted(storyData.size - 1, newElements.size)
+
+            //adapter.update( Parsing.storyItemFromLL(Parsing.getListOfReplics(Parsing.pathTemplate + it + ".txt")))
         }
         rvStory.adapter = adapter
-        storyData.addAll(Parsing.storyItemFromLL(Parsing.getListOfReplics("text\\1.txt")))
+        //storyData.addAll(Parsing.storyItemFromLL(Parsing.getListOfReplics("text\\a1.txt")))
         //adapter.notifyItemRangeInserted(0, storyData.size - 1)
-        adapter.notifyDataSetChanged();
+        //adapter.notifyDataSetChanged();
+
+//        adapter.update(Parsing.storyItemFromLL(Parsing.getListOfReplics("raw\\a1.txt")))
+        Parsing.getListOfReplics(getResources().openRawResource(R.raw.a1))
     }
 }

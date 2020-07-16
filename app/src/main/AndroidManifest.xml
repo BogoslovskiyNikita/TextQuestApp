@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".DevelopersActivity"></activity>
+        <activity android:name=".ReserveStoryActivity"></activity>
+        <activity android:name=".reserve.StoryActivity2" />
+        <activity android:name=".DevelopersActivity" />
         <activity android:name=".StoryActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
