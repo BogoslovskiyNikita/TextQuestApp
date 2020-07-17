@@ -705,7 +705,7 @@ class Replics{
          replics.set(19, r19)
          replics.set(20, r20)
          replics.set(21, r21)
-         replics.set(21, r21)
+         replics.set(22, r22)
          replics.set(23, r23)
          replics.set(24, r24)
          replics.set(25, r25)

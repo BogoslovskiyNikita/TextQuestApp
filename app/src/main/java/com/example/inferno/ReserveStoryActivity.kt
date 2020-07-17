@@ -1,10 +1,12 @@
 package com.example.inferno
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.example.inferno.choose_logic.*
 import com.example.inferno.player.*
 import kotlinx.android.synthetic.main.activity_reserve_story.*
@@ -17,11 +19,10 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[1]!!)
+        update(storage.replics[22]!!)
         updateHp(0)
 
         leftHand.setImageResource(getResIDByItem(BloodyKnife()))
-
     }
 
 
@@ -88,7 +89,6 @@ class ReserveStoryActivity : AppCompatActivity() {
                 }
                 startActivity(intent)
             }
-
         }
 
         if (replica is CheckItemReplica) {
