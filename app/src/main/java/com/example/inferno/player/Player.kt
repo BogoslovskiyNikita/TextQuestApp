@@ -39,7 +39,7 @@ class Player(hp: Int) {
     }
 
     fun addItem(name: String, hand: String) {
-        if (name == "blanket") {
+        if (name == "Blanket") {
             blanket = true
         } else if (hand == "left") {
             when (name) {
