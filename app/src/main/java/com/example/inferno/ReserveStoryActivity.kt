@@ -19,7 +19,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[90]!!)
+        update(storage.replics[88]!!)
         updateHp(0)
 
         leftHand.setImageResource(getResIDByItem(BloodyKnife()))
@@ -33,13 +33,14 @@ class ReserveStoryActivity : AppCompatActivity() {
     }
 
     //обновление актуального предмета и изображения
+    //TODO: здесь баг!!! (уже вроде нет)
     fun updateItem(hand: String, item: Item) {
         player.addItem(item.name, hand)
         if (hand == "left" && player.leftHand != null) {
             leftHand.setImageResource(getResIDByItem(player.leftHand!!))
         }
         if (hand == "right" && player.rightHand != null) {
-            leftHand.setImageResource(getResIDByItem(player.leftHand!!))
+            leftHand.setImageResource(getResIDByItem(player.rightHand!!))
         }
     }
 
