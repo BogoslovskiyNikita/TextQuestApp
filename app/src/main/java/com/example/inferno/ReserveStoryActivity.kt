@@ -31,10 +31,9 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[85]!!)
+        update(storage.replics[81]!!)
         updateHp(0)
 
-        leftHand.setImageResource(getResIDByItem(BloodyKnife()))
     }
 
 
@@ -60,7 +59,17 @@ class ReserveStoryActivity : AppCompatActivity() {
     fun update(replica: Replica) {
 
         button.setText(replica.firstChoose)
-        button.setOnClickListener() {
+        if (replica is GameReplica) {
+            button.setOnClickListener() {
+                if (replica.gameName == "tree") {
+                    var intent = Intent(applicationContext, TreeGameActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    var intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+        } else button.setOnClickListener() {
             update(storage.replics[replica.fstLink]!!)
         }
 
@@ -93,16 +102,7 @@ class ReserveStoryActivity : AppCompatActivity() {
             }
         }
 
-        if (replica is GameReplica) {
-            button.setOnClickListener() {
-                if (replica.gameName == "tree") {
-                    var intent = Intent(applicationContext, TreeGameActivity::class.java)
-                } else {
-                    var intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
-                }
-                startActivity(intent)
-            }
-        }
+
 
         if (replica is CheckItemReplica) {
             if (player.checkItem(replica.expectItemName)) {
@@ -137,7 +137,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         var resID: Int = getResources().getIdentifier(name, "drawable", getPackageName())
         return resID
     }
-    
+
     override fun onBackPressed() {
         val builder = AlertDialog.Builder(this)
         builder.setMessage("Если вы выйдете, весь текущий прогресс будет потерян.")
@@ -152,7 +152,8 @@ class ReserveStoryActivity : AppCompatActivity() {
             DialogInterface.OnClickListener { dialog, which ->
                 val intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
-                finish()})
+                finish()
+            })
 
         val alertDialog = builder.create()
         alertDialog.show()
