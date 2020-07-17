@@ -125,5 +125,25 @@ class ReserveStoryActivity : AppCompatActivity() {
         var resID: Int = getResources().getIdentifier(name, "drawable", getPackageName())
         return resID
     }
+    
+    override fun onBackPressed() {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("Если вы выйдете, весь текущий прогресс будет потерян.")
+        builder.setCancelable(true)
+        builder.setNegativeButton(
+            "Нет, я еще останусь",
+            DialogInterface.OnClickListener { dialog, which ->
+                dialog.cancel()
+            })
+        builder.setPositiveButton(
+            "Да, я наигрался",
+            DialogInterface.OnClickListener { dialog, which ->
+                val intent = Intent(applicationContext, MainActivity::class.java)
+                startActivity(intent)
+                finish()})
+
+        val alertDialog = builder.create()
+        alertDialog.show()
+    }
 
 }
