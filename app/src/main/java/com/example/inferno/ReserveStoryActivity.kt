@@ -15,7 +15,7 @@ class ReserveStoryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reserve_story)
+        setContentView(R.layout.activity_story)
 
         update(storage.replics[1]!!)
         updateHp(0)
