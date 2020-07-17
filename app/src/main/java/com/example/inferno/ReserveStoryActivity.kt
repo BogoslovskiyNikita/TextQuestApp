@@ -40,7 +40,7 @@ class ReserveStoryActivity : AppCompatActivity() {
             leftHand.setImageResource(getResIDByItem(player.leftHand!!))
         }
         if (hand == "right" && player.rightHand != null) {
-            leftHand.setImageResource(getResIDByItem(player.rightHand!!))
+            rightHand.setImageResource(getResIDByItem(player.rightHand!!))
         }
     }
 
