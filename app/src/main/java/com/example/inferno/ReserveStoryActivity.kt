@@ -92,13 +92,26 @@ class ReserveStoryActivity : AppCompatActivity() {
         }
 
         if (replica is CheckItemReplica) {
-
+            if(player.checkItem(replica.expectItemName)) {
+                button.setOnClickListener(){
+                    update(storage.replics[replica.fstLink]!!)
+                }
+            }
+            else {
+                button.setOnClickListener() {
+                    update(storage.replics[replica.thirdLink]!!)
+                }
+            }
         }
         if (replica is HpChangingRepilca) {
             updateHp(replica.hpChange)
         }
         if (replica is ItemChangingReplica) {
             updateItem(replica.hand, replica.item)
+        }
+        if (replica is DisableHandReplica) {
+            updateHp(replica.hpChange)
+            updateItem("left", SickHand())
         }
     }
 
