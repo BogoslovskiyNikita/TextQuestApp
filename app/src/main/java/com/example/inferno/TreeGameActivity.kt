@@ -142,6 +142,7 @@ class TreeGameActivity : AppCompatActivity() {
                         wonIntent.putExtra(wonSt, key)
                         user_choice.visibility = View.GONE
                         startActivity(wonIntent)
+                        finish()
                     }
                 }
                 user_choice.text.clear()
