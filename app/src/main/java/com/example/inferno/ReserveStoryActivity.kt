@@ -86,7 +86,7 @@ class ReserveStoryActivity : AppCompatActivity() {
                 if (replica.isGoodEnd) {
                     //TODO: какой конец хороший?
                     intent.putExtra("goodEnd", 78)
-                } else intent.putExtra("badEnd", replica.firstChoose)
+                } else intent.putExtra("badEnd", replica.fstLink)
                 startActivity(intent)
             }
         }

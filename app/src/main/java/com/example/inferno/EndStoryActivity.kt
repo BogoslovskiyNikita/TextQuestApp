@@ -83,7 +83,7 @@ class EndStoryActivity : AppCompatActivity() {
                     "Надеюсь, что в жизни у тебя сложится намного лучше :)"
 
         val end = intent.extras
-        if (end != null) {
+            if (end != null) {
             if (end["badEnd"] != null) {
                 setContentView(R.layout.bad_end_of_the_story)
                 val text = findViewById<View>(R.id.textStoryEnd) as TextView
