@@ -1,7 +1,7 @@
 package com.example.inferno.player
 
 class Player(hp: Int) {
-    var hp: Int = 0
+    var hp: Int = 100
     var leftHand: Item? = null
     var rightHand: Item? = null
     var blanket = false
@@ -41,8 +41,7 @@ class Player(hp: Int) {
     fun addItem(name: String, hand: String) {
         if (name == "blanket") {
             blanket = true
-        }
-        else if (hand == "left") {
+        } else if (hand == "left") {
             when (name) {
                 "Knife" -> leftHand = Knife()
                 "Gun" -> leftHand = Gun()
@@ -52,8 +51,7 @@ class Player(hp: Int) {
                 "FlashLight" -> leftHand = FlashLight()
                 "SickHand" -> leftHand = SickHand()
             }
-        }
-        else if (hand == "right") {
+        } else if (hand == "right") {
             when (name) {
                 "Knife" -> rightHand = Knife()
                 "Gun" -> rightHand = Gun()
@@ -94,10 +92,15 @@ class Player(hp: Int) {
         return tr
     }
 
-//    fun checkItem(itemName : String) : Boolean {
-//        if ()
-//        if ((leftHand.name == itemName) || (rightHand.name = itemName)) {
-//
-//        }
-//    }
+    fun checkItem(itemName: String): Boolean {
+        if (itemName == "Blanket") {
+            return blanket
+        }
+        if (leftHand != null) {
+            if (leftHand!!.name == itemName) return true
+        } else if (rightHand != null) {
+            if (leftHand!!.name == itemName) return true
+        }
+        return false
+    }
 }

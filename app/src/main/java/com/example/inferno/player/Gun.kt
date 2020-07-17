@@ -1,6 +1,6 @@
 package com.example.inferno.player
 
 class Gun : Item {
-    override val name = "Gun"
+    override var name = "Gun"
     override val pic = "gun_icon"
 }
