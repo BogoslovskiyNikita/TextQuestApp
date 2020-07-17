@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_reserve_story.*
 
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
-    var player = Player(100);
+    var player = Player(100)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,21 +22,16 @@ class ReserveStoryActivity : AppCompatActivity() {
 
         leftHand.setImageResource(getResIDByItem(BloodyKnife()))
 
-//        val intent = Intent(applicationContext, EndStoryActivity::class.java)
-//        startActivity(intent)
-//        intent.putExtra("goodEnd", 78)
     }
 
-    //проверка на концовку/мини игру
-    fun check() {
-    }
 
-    //обновление актуального хп и изображение
+    //обновление актуального хп и изображения
     fun updateHp(changeHp: Int) {
         player.changeHp(changeHp)
         hp.setImageResource(getResIDByName(player.hpPic))
     }
 
+    //обновление актуального предмета и изображения
     fun updateItem(hand: String, item: Item) {
         player.addItem(item.name, hand)
         if (hand == "left" && player.leftHand != null) {
@@ -47,8 +42,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         }
     }
 
-    //TODO: возможно, написать отдельную функцию для обновления кнопок.
-    //TODO: проверка на концовку/мини игру в самом начале метода
+    //TODO: возможно, написать отдельную функцию для обновления кнопок. (а может и не стоит)
     fun update(replica: Replica) {
 
         button.setText(replica.firstChoose)
@@ -73,31 +67,36 @@ class ReserveStoryActivity : AppCompatActivity() {
         } else button3.setVisibility(View.GONE)
 
         textView.setText(replica.replicaText)
+
         if (replica is EndReplica) {
             val intent = Intent(applicationContext, EndStoryActivity::class.java)
-            if (replica.isGoodEnd) {
-                //TODO: какой конец хороший?
-                intent.putExtra("goodEnd", 78)
-            } else intent.putExtra("badEnd", replica.firstChoose)
-            startActivity(intent)
+            button.setOnClickListener() {
+                if (replica.isGoodEnd) {
+                    //TODO: какой конец хороший?
+                    intent.putExtra("goodEnd", 78)
+                } else intent.putExtra("badEnd", replica.firstChoose)
+                startActivity(intent)
+            }
         }
 
         if (replica is GameReplica) {
-            if (replica.gameName == "tree") {
-                var intent = Intent(applicationContext, TreeGameActivity::class.java)
-            } else {
-                var intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
+            button.setOnClickListener() {
+                if (replica.gameName == "tree") {
+                    var intent = Intent(applicationContext, TreeGameActivity::class.java)
+                } else {
+                    var intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
+
         }
 
         if (replica is CheckItemReplica) {
-            if(player.checkItem(replica.expectItemName)) {
-                button.setOnClickListener(){
+            if (player.checkItem(replica.expectItemName)) {
+                button.setOnClickListener() {
                     update(storage.replics[replica.fstLink]!!)
                 }
-            }
-            else {
+            } else {
                 button.setOnClickListener() {
                     update(storage.replics[replica.thirdLink]!!)
                 }
