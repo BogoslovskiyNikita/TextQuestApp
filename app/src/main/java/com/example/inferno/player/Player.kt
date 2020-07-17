@@ -99,7 +99,7 @@ class Player(hp: Int) {
         if (leftHand != null) {
             if (leftHand!!.name == itemName) return true
         } else if (rightHand != null) {
-            if (leftHand!!.name == itemName) return true
+            if (rightHand!!.name == itemName) return true
         }
         return false
     }

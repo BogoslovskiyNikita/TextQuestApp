@@ -19,7 +19,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[88]!!)
+        update(storage.replics[41]!!)
         updateHp(0)
 
         leftHand.setImageResource(getResIDByItem(BloodyKnife()))
