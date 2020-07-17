@@ -17,6 +17,8 @@ import kotlinx.android.synthetic.main.activity_reserve_story.*
 //TODO: проблема с SDK
 //TODO: баг с собачьей игрушкой
 
+//TODO: всё еще направильно отображается концовка
+
 
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
@@ -29,7 +31,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[1]!!)
+        update(storage.replics[85]!!)
         updateHp(0)
 
         leftHand.setImageResource(getResIDByItem(BloodyKnife()))
