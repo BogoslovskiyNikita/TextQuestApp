@@ -11,6 +11,12 @@ import com.example.inferno.choose_logic.*
 import com.example.inferno.player.*
 import kotlinx.android.synthetic.main.activity_reserve_story.*
 
+//TODO: два "дальше" после яблока
+//TODO: навести красоту, распихать по пакетам
+//TODO: одно и то же в концовке
+//TODO: проблема с SDK
+
+
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
     var player = Player(100)
