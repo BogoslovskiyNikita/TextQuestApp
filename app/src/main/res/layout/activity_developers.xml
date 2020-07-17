@@ -88,11 +88,13 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="357dp"
+        android:layout_height="42dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="128dp"
-        android:text="@string/thanks_text_content"
+        android:text="@string/blagodarnost"
+        android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

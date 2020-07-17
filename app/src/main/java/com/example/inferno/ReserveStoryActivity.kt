@@ -22,10 +22,13 @@ class ReserveStoryActivity : AppCompatActivity() {
     var player = Player(100)
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        actionBar?.hide()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[41]!!)
+        update(storage.replics[1]!!)
         updateHp(0)
 
         leftHand.setImageResource(getResIDByItem(BloodyKnife()))

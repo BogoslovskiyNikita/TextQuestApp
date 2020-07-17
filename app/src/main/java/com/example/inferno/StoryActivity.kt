@@ -27,7 +27,7 @@ class StoryActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        actionBar?.hide()
+                actionBar?.hide()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
