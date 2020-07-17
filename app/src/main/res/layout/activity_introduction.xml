@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_introduction"
     tools:context=".IntroductionActivity">
 
     <TextView
@@ -14,7 +15,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="6dp"
-        android:text='Чтобы подзаработать немного денег ты согласился поучаствовать в одном эксперименте. Реклама громко гласила: "Хочешь внести вклад в науку, пройдя всего один квест? Хочешь подзаработать 1000 евро, если сможешь выбраться из комнаты за 1 час и меньше?  Хочешь оставить свой отпечаток в истории психологии? Тогда приходи к нам! Звони по номеру 20-03-20, узнай все подробности!" \n Когда ты позвонил по этому номеру, тебя приветствовал голос явно молодой девушки. Она заботливо узнала о тебе все, начиная от цвета глаз, заканчивая размером обуви. Спросила про образование и вредные привычки (у тебя их нет!). Тебе очень нужны были эти деньги. Тем более это же халява!  Поиграл да еще и деньги заплатили. Поэтому ты рассказал ей всё и даже больше. \n В назначенный час ты пришел в их офис. Кажется, что... нет, это точно она! Тебя встречает девушка из телефона. Ты смотришь ей в рот, ибо оттуда льется все тот же мягкий, успокаивающий голос. Она просит тебя присесть и надевает плотную черную повязку на глаза. Говорит, мол, для чистоты эксперимента ты не должен знать, где окажешься. Накатывает сон, ты уже не можешь сдержать позывы зевоты. \n Не стоило пить их чай. Ты собираешься им сказать об этом, предупредить, что чай-то их необычный, спать от него хочется, но уже не можешь. Ты ощущаешь, как твою голову прислоняют к подушке. Морфей уже ждет тебя с распростертыми руками...'
+        android:text="@string/text"
+        android:textColor="#e5daef"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/toStory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.296"
@@ -27,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="28dp"
-        android:text="далее..."
+        android:text="@string/button"
+        android:background="@drawable/button_introduction"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
