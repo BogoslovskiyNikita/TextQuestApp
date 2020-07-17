@@ -30,7 +30,8 @@ class TreeGameActivity : AppCompatActivity() {
         val sound2 = sound2 ?: return
 
         var count = 0
-        var won = 0;
+        var wonSt = "";
+        var key = 0
         var number = 0;
 
         user_choice.visibility = View.GONE
@@ -85,7 +86,8 @@ class TreeGameActivity : AppCompatActivity() {
 
                             Handler().postDelayed({
                                 ded_say.text = getString(R.string.tree_won, number)
-                                won = 1
+                                key = 0
+                                wonSt = "goodEnd"
                                 btn_answer.visibility = View.VISIBLE
 
                             }, 4100)
@@ -95,7 +97,8 @@ class TreeGameActivity : AppCompatActivity() {
 
                             Handler().postDelayed({
                                 ded_say.text = getString(R.string.tree_lose)
-                                won = 0
+                                key = 1
+                                wonSt = "badEnd"
                                 btn_answer.visibility = View.VISIBLE
                             }, 6100)
 
@@ -135,10 +138,10 @@ class TreeGameActivity : AppCompatActivity() {
 
                     }
                     5 -> {
-                       /* val wonIntent = Intent(this, EndStoryActivity::class.java)
-                        wonIntent.putExtra(EndStoryActivity.WON, won)
+                        val wonIntent = Intent(this, EndStoryActivity::class.java)
+                        wonIntent.putExtra(wonSt, key)
                         user_choice.visibility = View.GONE
-                        startActivity(wonIntent)*/
+                        startActivity(wonIntent)
                     }
                 }
                 user_choice.text.clear()

@@ -11,8 +11,8 @@ import kotlin.random.Random
 
 class RockPaperScissorsActivity : AppCompatActivity() {
 
-    var playerWon = 0
-    var flag = false;
+    var playerWon = ""
+    var key = 0;
 
     var dobryniaPoints = 0;
     var playerPoints = 0;
@@ -78,14 +78,18 @@ class RockPaperScissorsActivity : AppCompatActivity() {
 
 
             if (dobryniaPoints >= 3 || playerPoints >= 3) {
-                if (dobryniaPoints < playerPoints) playerWon = 1;
+                if (dobryniaPoints < playerPoints) {
+                    playerWon = "goodEnd"
+                    key = 0
+                } else {
+                    playerWon = "badEnd"
+                    key = 1
+                }
 
-                /*
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
-                wonIntent.putExtra(EndStoryActivity.WON, playerWon)
+                wonIntent.putExtra(playerWon, key)
                 startActivity(wonIntent)
 
-                 */
             }
         }
 
@@ -121,14 +125,18 @@ class RockPaperScissorsActivity : AppCompatActivity() {
 
 
             if (dobryniaPoints >= 3 || playerPoints >= 3) {
-                if (dobryniaPoints < playerPoints) playerWon = 1
+                if (dobryniaPoints < playerPoints) {
+                    playerWon = "goodEnd"
+                    key = 0
+                } else {
+                    playerWon = "badEnd"
+                    key = 1
+                }
 
-                /*
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
-                wonIntent.putExtra(EndStoryActivity.WON, playerWon)
+                wonIntent.putExtra(playerWon, key)
                 startActivity(wonIntent)
 
-                 */
             }
 
         }
@@ -163,14 +171,18 @@ class RockPaperScissorsActivity : AppCompatActivity() {
             replic = getString(R.string.dobrynya_choose) + thing;
 
             if (dobryniaPoints >= 3 || playerPoints >= 3) {
-                if (dobryniaPoints < playerPoints) playerWon = 1
+                if (dobryniaPoints < playerPoints) {
+                    playerWon = "goodEnd"
+                    key = 0
+                } else {
+                    playerWon = "badEnd"
+                    key = 1
+                }
 
-                /*
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
-                wonIntent.putExtra(EndStoryActivity.WON, playerWon)
+                wonIntent.putExtra(playerWon, key)
                 startActivity(wonIntent)
 
-                 */
             }
         }
 
