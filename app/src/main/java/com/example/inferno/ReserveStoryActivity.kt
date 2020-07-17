@@ -64,9 +64,11 @@ class ReserveStoryActivity : AppCompatActivity() {
                 if (replica.gameName == "tree") {
                     var intent = Intent(applicationContext, TreeGameActivity::class.java)
                     startActivity(intent)
+                    finish()
                 } else {
                     var intent = Intent(applicationContext, RockPaperScissorsActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
             }
         } else button.setOnClickListener() {
@@ -99,6 +101,7 @@ class ReserveStoryActivity : AppCompatActivity() {
                     intent.putExtra("goodEnd", 78)
                 } else intent.putExtra("badEnd", replica.fstLink)
                 startActivity(intent)
+                finish()
             }
         }
 
