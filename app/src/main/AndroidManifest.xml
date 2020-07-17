@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".IntroductionActivity"></activity>
+        <activity android:name=".ReserveStoryActivity" />
+        <activity android:name=".reserve.StoryActivity2" />
+        <activity android:name=".DevelopersActivity" />
         <activity android:name=".EndStoryActivity"></activity>
         <activity android:name=".TreeGameActivity"></activity>
         <service android:enabled="true" android:name=".MyService" />

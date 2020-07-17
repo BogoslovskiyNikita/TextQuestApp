@@ -14,9 +14,12 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //todo: добавить finish() везде
+
         startService(Intent(this, MyService::class.java))
         StartGame.setOnClickListener() {
-            val intent = Intent(applicationContext, StoryActivity::class.java)
+            val intent = Intent(applicationContext, IntroductionActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -43,11 +46,11 @@ class MainActivity : AppCompatActivity() {
             stopService(Intent(this, MyService::class.java))
         }
     }
-  
+
     override fun onBackPressed() {
         finish()
     }
-  
+
     override fun onResume() {
         flag = true
         super.onResume()

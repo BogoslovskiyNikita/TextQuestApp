@@ -20,6 +20,7 @@ class DevelopersActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
             finish()
+            finish()
         }
 
 //        button2.setOnClickListener {
@@ -36,12 +37,14 @@ class DevelopersActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
     override fun onPause() {
         super.onPause()
-        if(flag){
+        if (flag) {
             stopService(Intent(this, MyService::class.java))
         }
     }
+
 
     override fun onResume() {
         flag = true
