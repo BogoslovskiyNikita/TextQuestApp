@@ -19,7 +19,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[22]!!)
+        update(storage.replics[90]!!)
         updateHp(0)
 
         leftHand.setImageResource(getResIDByItem(BloodyKnife()))
@@ -63,7 +63,7 @@ class ReserveStoryActivity : AppCompatActivity() {
             button3.setVisibility(View.VISIBLE)
             button3.setText(replica.thirdChoose)
             button3.setOnClickListener() {
-                update(storage.replics[replica.fstLink]!!)
+                update(storage.replics[replica.thirdLink]!!)
             }
         } else button3.setVisibility(View.GONE)
 
