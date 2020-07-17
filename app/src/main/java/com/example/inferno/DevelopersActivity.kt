@@ -37,12 +37,13 @@ class DevelopersActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
     override fun onPause() {
         super.onPause()
-        if(flag){
+        if (flag) {
             stopService(Intent(this, MyService::class.java))
         }
-
+    }
 
 
     override fun onResume() {

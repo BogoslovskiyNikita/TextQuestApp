@@ -1,6 +1,6 @@
 package com.example.inferno.player
 
 interface Item {
-     val name: String
+     var name: String
      val pic: String
 }

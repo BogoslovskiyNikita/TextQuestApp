@@ -31,7 +31,7 @@ class StoryActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
-        rvStory.layoutManager = LinearLayoutManager(this)
+        //rvStory.layoutManager = LinearLayoutManager(this)
         storyData = mutableListOf(
             StoryItem(
                 "test", null, null, null
@@ -45,7 +45,7 @@ class StoryActivity : AppCompatActivity() {
 
             //adapter.update( Parsing.storyItemFromLL(Parsing.getListOfReplics(Parsing.pathTemplate + it + ".txt")))
         }
-        rvStory.adapter = adapter
+        //rvStory.adapter = adapter
         //storyData.addAll(Parsing.storyItemFromLL(Parsing.getListOfReplics("text\\a1.txt")))
         //adapter.notifyItemRangeInserted(0, storyData.size - 1)
         //adapter.notifyDataSetChanged();

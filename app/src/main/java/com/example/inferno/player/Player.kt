@@ -94,12 +94,10 @@ class Player(hp: Int) {
         return tr
     }
 
-//    fun chekItem(item: String): Boolean {
-//        if (leftHand == null) {
-//            if (rightHand == null)
-//                return false
-//            else return rightHand!!.name == item
-//        }
+//    fun checkItem(itemName : String) : Boolean {
+//        if ()
+//        if ((leftHand.name == itemName) || (rightHand.name = itemName)) {
 //
+//        }
 //    }
 }
