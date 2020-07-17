@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_reserve_story.*
 //TODO: навести красоту, распихать по пакетам
 //TODO: одно и то же в концовке
 //TODO: проблема с SDK
+//TODO: баг с собачьей игрушкой
 
 
 class ReserveStoryActivity : AppCompatActivity() {
