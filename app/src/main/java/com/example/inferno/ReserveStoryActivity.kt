@@ -15,10 +15,11 @@ import kotlinx.android.synthetic.main.activity_reserve_story.*
 //TODO: навести красоту, распихать по пакетам
 //TODO: одно и то же в концовке
 //TODO: проблема с SDK
-//TODO: баг с собачьей игрушкой
+//TODO: баг с собачьей игрушкой (петухом)
 
-//TODO: всё еще направильно отображается концовка
-
+//TODO: беда с одеялом
+//TODO: с конца мини-игры не выходит
+//TODO: не переходит на КНБ, кидает на полцарства
 
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
@@ -31,7 +32,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[81]!!)
+        update(storage.replics[83]!!)
         updateHp(0)
 
     }
@@ -95,7 +96,6 @@ class ReserveStoryActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, EndStoryActivity::class.java)
             button.setOnClickListener() {
                 if (replica.isGoodEnd) {
-                    //TODO: какой конец хороший?
                     intent.putExtra("goodEnd", 78)
                 } else intent.putExtra("badEnd", replica.fstLink)
                 startActivity(intent)
