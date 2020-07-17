@@ -41,6 +41,6 @@ class StoryActivity : AppCompatActivity() {
         //adapter.notifyDataSetChanged();
 
 //        adapter.update(Parsing.storyItemFromLL(Parsing.getListOfReplics("raw\\a1.txt")))
-        Parsing.getListOfReplics(getResources().openRawResource(R.raw.a1))
+//        Parsing.getListOfReplics(getResources().openRawResource(R.raw.a1))
     }
 }
