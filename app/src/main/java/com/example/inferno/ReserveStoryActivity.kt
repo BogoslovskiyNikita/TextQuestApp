@@ -3,6 +3,7 @@ package com.example.inferno
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Resources
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,6 +22,7 @@ import kotlinx.android.synthetic.main.activity_reserve_story.*
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
     var player = Player(100)
+    private var player1: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -154,6 +156,18 @@ class ReserveStoryActivity : AppCompatActivity() {
 
         val alertDialog = builder.create()
         alertDialog.show()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        player1!!.stop()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        player1 = MediaPlayer.create(this, R.raw.inferno_background)
+        player1!!.isLooping = true
+        player1!!.start()
     }
 
 }
