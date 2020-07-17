@@ -15,8 +15,9 @@ class MainActivity : AppCompatActivity() {
         //todo: добавить finish() везде
 
         StartGame.setOnClickListener() {
-            val intent = Intent(applicationContext, ReserveStoryActivity::class.java)
+            val intent = Intent(applicationContext, IntroductionActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //есть баг, не всегда работает корректно.
