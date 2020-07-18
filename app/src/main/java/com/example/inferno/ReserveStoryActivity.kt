@@ -162,4 +162,16 @@ class ReserveStoryActivity : AppCompatActivity() {
         alertDialog.show()
     }
 
+    override fun onStop() {
+        super.onStop()
+        player1!!.stop()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        player1 = MediaPlayer.create(this, R.raw.inferno_background)
+        player1!!.isLooping = true
+        player1!!.start()
+    }
+
 }
