@@ -24,7 +24,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[58]!!)
+        update(storage.replics[1]!!)
         updateHp(0)
 
     }
