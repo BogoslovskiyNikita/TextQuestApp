@@ -103,6 +103,7 @@ class ReserveStoryActivity : AppCompatActivity() {
                     intent.putExtra("goodEnd", 78)
                 } else intent.putExtra("badEnd", replica.fstLink)
                 startActivity(intent)
+                finish()
             }
         }
 
