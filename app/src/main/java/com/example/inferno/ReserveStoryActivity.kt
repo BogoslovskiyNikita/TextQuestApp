@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.activity_reserve_story.*
 
 //TODO: беда с одеялом
 //TODO: с конца мини-игры не выходит
-//TODO: не переходит на КНБ, кидает на полцарства
 
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
@@ -34,7 +33,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[1]!!)
+        update(storage.replics[85]!!)
         updateHp(0)
 
     }
