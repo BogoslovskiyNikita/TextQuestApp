@@ -89,7 +89,7 @@ class RockPaperScissorsActivity : AppCompatActivity() {
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
                 wonIntent.putExtra(playerWon, key)
                 startActivity(wonIntent)
-
+                finish()
             }
         }
 
@@ -136,7 +136,7 @@ class RockPaperScissorsActivity : AppCompatActivity() {
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
                 wonIntent.putExtra(playerWon, key)
                 startActivity(wonIntent)
-
+                finish()
             }
 
         }
@@ -182,7 +182,7 @@ class RockPaperScissorsActivity : AppCompatActivity() {
                 val wonIntent = Intent(this, EndStoryActivity::class.java)
                 wonIntent.putExtra(playerWon, key)
                 startActivity(wonIntent)
-
+                finish()
             }
         }
 
