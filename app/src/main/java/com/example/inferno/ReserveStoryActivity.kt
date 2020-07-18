@@ -18,8 +18,9 @@ import kotlinx.android.synthetic.main.activity_reserve_story.*
 //TODO: проблема с SDK
 //TODO: баг с собачьей игрушкой (петухом)
 
-//TODO: беда с одеялом
 //TODO: с конца мини-игры не выходит
+//TODO: слишком большие кнопки в 11... репликах
+//TODO: одеяло всё ещё не работает
 
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
