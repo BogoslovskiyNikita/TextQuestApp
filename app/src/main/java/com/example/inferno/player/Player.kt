@@ -84,15 +84,7 @@ class Player(hp: Int) {
         return tr
     }
 
-    // эта функция вызывается, когда нужно поставить иконку больной руки
-    fun leftHandSick(): Boolean {
-        val tr = true
-        leftHand = SickHand()
-
-        return tr
-    }
-
-    fun checkItem(itemName: String): Boolean {
+     fun checkItem(itemName: String): Boolean {
         if (itemName == "Blanket") {
             return blanket
         }
@@ -103,4 +95,11 @@ class Player(hp: Int) {
         }
         return false
     }
+
+//    fun knifeGunCockArray() : BooleanArray {
+//        var boolArr = BooleanArray(3);
+//        boolArr[0] = checkItem("Knife")
+//        boolArr[1] = checkItem("Gun")
+//        boolArr[2] = checkItem("Cock")
+//    }
 }

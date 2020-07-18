@@ -22,13 +22,6 @@ class DevelopersActivity : AppCompatActivity() {
             finish()
             finish()
         }
-
-//        button2.setOnClickListener {
-//            flag = false
-//            val intent = Intent(applicationContext, TreeGameActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
     }
 
     override fun onBackPressed() {

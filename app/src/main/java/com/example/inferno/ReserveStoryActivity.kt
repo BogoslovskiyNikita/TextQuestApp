@@ -12,16 +12,6 @@ import com.example.inferno.choose_logic.*
 import com.example.inferno.player.*
 import kotlinx.android.synthetic.main.activity_reserve_story.*
 
-//TODO: два "дальше" после яблока
-//TODO: навести красоту, распихать по пакетам
-//TODO: одно и то же в концовке
-//TODO: проблема с SDK
-//TODO: баг с собачьей игрушкой (петухом)
-
-//TODO: с конца мини-игры не выходит
-//TODO: слишком большие кнопки в 11... репликах
-//TODO: одеяло всё ещё не работает
-
 class ReserveStoryActivity : AppCompatActivity() {
     var storage = Replics()
     var player = Player(100)
@@ -34,7 +24,7 @@ class ReserveStoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_story)
 
-        update(storage.replics[85]!!)
+        update(storage.replics[58]!!)
         updateHp(0)
 
     }
@@ -47,7 +37,6 @@ class ReserveStoryActivity : AppCompatActivity() {
     }
 
     //обновление актуального предмета и изображения
-    //TODO: здесь баг!!! (уже вроде нет)
     fun updateItem(hand: String, item: Item) {
         player.addItem(item.name, hand)
         if (hand == "left" && player.leftHand != null) {
@@ -58,7 +47,6 @@ class ReserveStoryActivity : AppCompatActivity() {
         }
     }
 
-    //TODO: возможно, написать отдельную функцию для обновления кнопок. (а может и не стоит)
     fun update(replica: Replica) {
 
         button.setText(replica.firstChoose)
@@ -110,14 +98,15 @@ class ReserveStoryActivity : AppCompatActivity() {
 
 
         if (replica is CheckItemReplica) {
-            if (player.checkItem(replica.expectItemName)) {
-                button.setOnClickListener() {
+            button.setOnClickListener() {
+                if (replica.expectItemName == "Knife") {
+                    if (player.checkItem("BloodyKnife") || player.checkItem("Knife")) {
+                        update(storage.replics[replica.fstLink]!!)
+                    }
+                }
+                if (player.checkItem(replica.expectItemName)) {
                     update(storage.replics[replica.fstLink]!!)
-                }
-            } else {
-                button.setOnClickListener() {
-                    update(storage.replics[replica.thirdLink]!!)
-                }
+                } else update(storage.replics[replica.thirdLink]!!)
             }
         }
         if (replica is HpChangingRepilca) {
